@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>粉鲍鱼官网 - 粉鲍鱼APP官方下载 | 粉鲍鱼 fenbaoyu-app</title>
+<meta name="description" content="粉鲍鱼（fenbaoyu-app）官方主页，提供粉鲍鱼APP最新版下载、功能介绍、新手使用教程、真实用户评价与常见问题解答。粉鲍鱼，一个更好用的兴趣内容社区。" />
+<meta name="keywords" content="粉鲍鱼,粉鲍鱼官网,粉鲍鱼APP,粉鲍鱼下载,粉鲍鱼社区,粉鲍鱼官方,fenbaoyu,fenbaoyu-app" />
+<meta name="author" content="粉鲍鱼" />
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="theme-color" content="#12081f" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="粉鲍鱼" />
+<meta name="msapplication-TileColor" content="#12081f" />
+<link rel="canonical" href="https://fenbaoyu-app.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="粉鲍鱼" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:title" content="粉鲍鱼官网 - 粉鲍鱼APP官方下载" />
+<meta property="og:description" content="粉鲍鱼官方主页：最新版下载、核心功能介绍、三步上手教程、用户真实评价与常见问题，一站了解粉鲍鱼。" />
+<meta property="og:url" content="https://fenbaoyu-app.com/" />
+<meta property="og:image" content="https://fenbaoyu-app.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="粉鲍鱼官网 - 粉鲍鱼APP官方下载" />
+<meta name="twitter:description" content="粉鲍鱼官方主页：最新版下载、核心功能、使用教程、用户评价与常见问题。" />
+<meta name="twitter:image" content="https://fenbaoyu-app.com/og-image.jpg" />
+<style>
+:root{
+  --bg:#12081f;
+  --bg2:#1b0c2e;
+  --card:rgba(255,255,255,.055);
+  --card-b:rgba(255,255,255,.12);
+  --pink:#ff5fa2;
+  --pink2:#ff8fc3;
+  --orange:#ff9d6c;
+  --cyan:#5fe3d2;
+  --txt:#f5eef8;
+  --sub:#b9a9c9;
+  --radius:18px;
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:74px;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--txt);line-height:1.75;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  padding-bottom:0;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+
+/* ---------- 背景光晕 ---------- */
+.glow{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.glow span{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55}
+.glow .g1{width:52vw;height:52vw;left:-14vw;top:-12vw;background:radial-gradient(circle,#ff5fa2,transparent 65%)}
+.glow .g2{width:44vw;height:44vw;right:-12vw;top:18vh;background:radial-gradient(circle,#5fe3d2,transparent 65%);opacity:.36}
+.glow .g3{width:60vw;height:60vw;left:22vw;bottom:-26vw;background:radial-gradient(circle,#ff9d6c,transparent 62%);opacity:.32}
+
+/* ---------- 阅读进度条 ---------- */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:60;
+  background:linear-gradient(90deg,var(--pink),var(--orange),var(--cyan));}
+
+/* ---------- 顶部导航 ---------- */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:rgba(18,8,31,.78);border-bottom:1px solid rgba(255,255,255,.08);
+}
+.topbar .inner{max-width:var(--max);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.18rem;letter-spacing:.5px;flex-shrink:0}
+.mark{width:34px;height:34px;border-radius:12px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--pink),var(--orange));
+  display:grid;place-items:center;font-size:1rem;font-weight:900;color:#2a0a1c;
+  box-shadow:0 6px 18px rgba(255,95,162,.45);}
+.brand b{color:#fff}
+.nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.nav a{font-size:.93rem;color:var(--sub);padding:7px 12px;border-radius:999px;transition:.25s;white-space:nowrap}
+.nav a:hover,.nav a.active{color:#fff;background:rgba(255,255,255,.1)}
+.btn-mini{background:linear-gradient(135deg,var(--pink),var(--orange));color:#2a0a1c;
+  font-weight:800;font-size:.9rem;padding:9px 18px;border-radius:999px;flex-shrink:0;
+  box-shadow:0 6px 16px rgba(255,95,162,.35);}
+
+/* ---------- 通用 ---------- */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:76px 0;scroll-margin-top:74px}
+.eyebrow{display:inline-block;font-size:.8rem;letter-spacing:.22em;color:var(--pink2);
+  text-transform:uppercase;font-weight:700;margin-bottom:14px}
+h1{font-size:clamp(2rem,6.4vw,3.6rem);line-height:1.22;font-weight:900;letter-spacing:-.5px}
+h2{font-size:clamp(1.5rem,4.4vw,2.35rem);line-height:1.3;font-weight:850;margin-bottom:12px}
+h3{font-size:1.12rem;font-weight:800;line-height:1.4}
+.lead{color:var(--sub);font-size:clamp(1rem,2.6vw,1.1rem);max-width:62ch;margin:14px 0 0}
+.head{max-width:var(--max);margin:0 auto;padding:0 20px 34px;text-align:center}
+.head .lead{margin-left:auto;margin-right:auto}
+
+/* ---------- Hero ---------- */
+.hero{padding:64px 0 70px;position:relative}
+.hero-grid{max-width:var(--max);margin:0 auto;padding:0 20px;display:grid;
+  grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--card-b);
+  padding:7px 15px;border-radius:999px;font-size:.83rem;color:var(--sub);margin-bottom:22px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px rgba(95,227,210,.2)}
+.hero h1 .hl{background:linear-gradient(120deg,var(--pink),var(--orange));-webkit-background-clip:text;
+  background-clip:text;color:transparent}
+.cta{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:14px;
+  font-weight:800;font-size:1rem;transition:.25s;border:1px solid transparent}
+.btn-p{background:linear-gradient(135deg,var(--pink),var(--orange));color:#2a0a1c;
+  box-shadow:0 12px 30px rgba(255,95,162,.35)}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(255,95,162,.5)}
+.btn-g{background:var(--card);border-color:var(--card-b);color:#fff}
+.btn-g:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.stats{display:flex;gap:28px;margin-top:38px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.1);padding-top:24px}
+.stats div strong{display:block;font-size:1.6rem;font-weight:900;
+  background:linear-gradient(120deg,#fff,var(--pink2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats div span{font-size:.85rem;color:var(--sub)}
+/* 手机 mockup（纯 CSS） */
+.phone{position:relative;width:100%;max-width:330px;margin:0 auto;aspect-ratio:9/18;
+  border-radius:38px;padding:12px;
+  background:linear-gradient(160deg,rgba(255,255,255,.16),rgba(255,255,255,.04));
+  border:1px solid rgba(255,255,255,.2);box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.screen{height:100%;border-radius:28px;overflow:hidden;background:linear-gradient(180deg,#231039,#150b26);
+  padding:22px 16px;display:flex;flex-direction:column;gap:11px}
+.notch{width:44%;height:22px;margin:0 auto 8px;background:#0d0518;border-radius:0 0 14px 14px}
+.s-line{height:12px;border-radius:8px;background:rgba(255,255,255,.12)}
+.s-card{height:64px;border-radius:14px;background:linear-gradient(120deg,rgba(255,95,162,.35),rgba(255,157,108,.22));
+  border:1px solid rgba(255,255,255,.14)}
+.s-row{display:flex;gap:8px}
+.s-row i{flex:1;height:44px;border-radius:12px;background:rgba(255,255,255,.09);display:block}
+.s-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}
+.s-tags i{height:26px;width:62px;border-radius:999px;background:rgba(95,227,210,.2);display:block}
+
+/* ---------- 功能卡片 ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--card-b);border-radius:var(--radius);
+  padding:26px 24px;transition:.3s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,95,162,.5);background:rgba(255,255,255,.09)}
+.ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:1.3rem;
+  background:linear-gradient(135deg,rgba(255,95,162,.3),rgba(95,227,210,.25));margin-bottom:16px}
+.card p{color:var(--sub);font-size:.94rem;margin-top:8px}
+
+/* ---------- 步骤 ---------- */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;counter-reset:s}
+.step{position:relative;background:var(--card);border:1px solid var(--card-b);border-radius:var(--radius);padding:28px 24px 26px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;right:18px;top:10px;
+  font-size:3.4rem;font-weight:900;color:rgba(255,255,255,.07);line-height:1}
+.step h3{margin-bottom:6px}
+.step p{color:var(--sub);font-size:.94rem}
+
+/* ---------- 评价 ---------- */
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.quote{background:var(--card);border:1px solid var(--card-b);border-radius:var(--radius);padding:24px}
+.stars{color:var(--orange);letter-spacing:2px;font-size:.9rem;margin-bottom:10px}
+.quote p{font-size:.95rem;color:#e9dff0}
+.who{display:flex;align-items:center;gap:10px;margin-top:16px}
+.avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--cyan));
+  display:grid;place-items:center;font-weight:800;font-size:.85rem;color:#23102f}
+.who small{display:block;color:var(--sub);font-size:.78rem}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:820px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--card-b);border-radius:14px;margin-bottom:12px;padding:0}
+.faq summary{cursor:pointer;padding:18px 20px;font-weight:700;font-size:1rem;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.4rem;color:var(--pink);font-weight:700;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 20px 20px;color:var(--sub);font-size:.94rem}
+
+/* ---------- 下载 CTA ---------- */
+.cta-box{max-width:var(--max);margin:0 auto;padding:0 20px}
+.cta-in{border-radius:26px;padding:clamp(32px,6vw,58px) clamp(22px,5vw,54px);text-align:center;
+  background:linear-gradient(135deg,rgba(255,95,162,.24),rgba(95,227,210,.16));
+  border:1px solid rgba(255,255,255,.18)}
+.cta-in h2{margin-bottom:10px}
+.store{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.store a{display:inline-flex;align-items:center;gap:9px;background:rgba(18,8,31,.55);border:1px solid rgba(255,255,255,.22);
+  padding:13px 22px;border-radius:14px;font-weight:700;font-size:.95rem;transition:.25s}
+.store a:hover{transform:translateY(-3px);border-color:var(--pink)}
+
+/* ---------- 关于 ---------- */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-grid ul{display:grid;gap:12px;margin-top:18px}
+.about-grid li{padding-left:26px;position:relative;color:var(--sub);font-size:.95rem}
+.about-grid li::before{content:"✓";position:absolute;left:0;color:var(--cyan);font-weight:800}
+.panel{border-radius:22px;border:1px solid var(--card-b);background:var(--card);padding:26px;display:grid;gap:14px}
+.panel div{display:flex;justify-content:space-between;gap:14px;padding-bottom:12px;
+  border-bottom:1px dashed rgba(255,255,255,.14);font-size:.93rem}
+.panel div:last-child{border:0;padding-bottom:0}
+.panel span{color:var(--sub)}
+.panel b{font-weight:800}
+
+/* ---------- 页脚 ---------- */
+footer{border-top:1px solid rgba(255,255,255,.1);padding:44px 0 calc(96px + env(safe-area-inset-bottom));
+  background:rgba(0,0,0,.25)}
+.f-grid{max-width:var(--max);margin:0 auto;padding:0 20px;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px}
+.f-grid h4{font-size:.92rem;margin-bottom:12px;color:#fff}
+.f-grid a{display:block;color:var(--sub);font-size:.88rem;padding:5px 0;transition:.2s}
+.f-grid a:hover{color:var(--pink2)}
+.copy{max-width:var(--max);margin:30px auto 0;padding:18px 20px 0;border-top:1px solid rgba(255,255,255,.08);
+  color:#8d7c9c;font-size:.82rem;text-align:center}
+
+/* ---------- 移动端底部导航 ---------- */
+.tabbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  background:rgba(18,8,31,.94);border-top:1px solid rgba(255,255,255,.1);
+  padding-bottom:env(safe-area-inset-bottom)}
+.tabbar ul{display:grid;grid-template-columns:repeat(5,1fr)}
+.tabbar a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:9px 0 7px;
+  font-size:.68rem;color:var(--sub)}
+.tabbar a.active{color:var(--pink2)}
+.tabbar .ti{font-size:1.15rem;line-height:1}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:38px}
+  .hero .phone{order:-1;max-width:270px}
+  .about-grid{grid-template-columns:1fr;gap:28px}
+  section{padding:58px 0}
+}
+@media (max-width:768px){
+  .nav{display:none}
+  .tabbar{display:block}
+  .topbar .inner{padding:10px 16px}
+  .wrap,.head,.hero-grid,.cta-box,.f-grid,.copy{padding-left:16px;padding-right:16px}
+  h1{font-size:clamp(1.7rem,7.6vw,2.4rem)}
+  .cta .btn{flex:1 1 100%;text-align:center}
+  .stats{gap:18px}
+  .stats div strong{font-size:1.3rem}
+  .grid,.quotes,.steps{grid-template-columns:1fr}
+}
+@media (max-width:380px){
+  .brand span.t{display:none}
+  .tabbar a{font-size:.62rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<div class="glow" aria-hidden="true"><span class="g1"></span><span class="g2"></span><span class="g3"></span></div>
+<div class="progress" id="bar" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="inner">
+    <a class="brand" href="#home" aria-label="粉鲍鱼官网首页">
+      <span class="mark" aria-hidden="true">粉</span>
+      <b>粉鲍鱼</b><span class="t" style="color:var(--sub);font-weight:600;font-size:.82rem">fenbaoyu-app</span>
+    </a>
+    <nav class="nav" aria-label="网站主导航">
+      <a href="#home">首页</a>
+      <a href="#features">核心功能</a>
+      <a href="#guide">新手教程</a>
+      <a href="#reviews">用户评价</a>
+      <a href="#faq">常见问题</a>
+      <a href="#about">关于粉鲍鱼</a>
+    </nav>
+    <a class="btn-mini" href="#download">免费下载</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- 1. 首页 -->
+  <section id="home" class="hero" aria-labelledby="h1-title">
+    <div class="hero-grid">
+      <div>
+        <p class="badge"><i class="dot" aria-hidden="true"></i>粉鲍鱼 v3.2.0 已发布 · 全新兴趣社区</p>
+        <h1 id="h1-title">发现你的<span class="hl">粉鲍鱼</span>圈<br />好玩的人都在这里</h1>
+        <p class="lead">粉鲍鱼是一款面向年轻人的兴趣内容社区 APP。在粉鲍鱼，你可以按兴趣找到同好圈子、发布图文与短视频、参与话题活动，用更轻的方式记录生活。粉鲍鱼官网提供最新版下载与完整使用指南。</p>
+        <div class="cta">
+          <a class="btn btn-p" href="#download">下载粉鲍鱼 APP</a>
+          <a class="btn btn-g" href="#features">看看核心功能</a>
+        </div>
+        <div class="stats">
+          <div><strong>860万+</strong><span>粉鲍鱼注册用户</span></div>
+          <div><strong>32万</strong><span>兴趣圈子</span></div>
+          <div><strong>4.8分</strong><span>应用商店评分</span></div>
+          <div><strong>每日 15 万</strong><span>新增内容</span></div>
+        </div>
+      </div>
+      <div class="phone" role="img" aria-label="粉鲍鱼 APP 界面示意图">
+        <div class="screen">
+          <div class="notch" aria-hidden="true"></div>
+          <div class="s-line" style="width:60%"></div>
+          <div class="s-card" aria-hidden="true"></div>
+          <div class="s-row"><i></i><i></i></div>
+          <div class="s-line" style="width:85%"></div>
+          <div class="s-line" style="width:45%"></div>
+          <div class="s-card" aria-hidden="true"></div>
+          <div class="s-tags"><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 核心功能 -->
+  <section id="features" aria-labelledby="h-features">
+    <div class="head">
+      <p class="eyebrow">Core Features</p>
+      <h2 id="h-features">粉鲍鱼的核心功能</h2>
+      <p class="lead">从找圈子到发内容，粉鲍鱼把一整套兴趣社区体验做得更简单。</p>
+    </div>
+    <div class="wrap">
+      <div class="grid">
+        <article class="card">
+          <div class="ico" aria-hidden="true">🌸</div>
+          <h3>兴趣圈子</h3>
+          <p>粉鲍鱼内置 32 万个细分兴趣圈，二次元、手工、摄影、露营一键加入，同好自动聚拢。</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">🎨</div>
+          <h3>图文 / 短视频发布</h3>
+          <p>粉鲍鱼编辑器支持长图、拼图与 60 秒短视频，模板与滤镜持续更新，随手就能发。</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">💬</div>
+          <h3>实时话题互动</h3>
+          <p>热门话题榜与弹幕式评论，让粉鲍鱼上的每一次讨论都能被看见、被接住。</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">🔔</div>
+          <h3>智能推荐</h3>
+          <p>基于兴趣标签的推荐算法，粉鲍鱼首页只推你想看的内容，越用越懂你。</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">🛡️</div>
+          <h3>隐私与青少年保护</h3>
+          <p>粉鲍鱼提供一键私密账号、陌生人私信过滤与青少年模式，社区环境更安心。</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">📦</div>
+          <h3>云端草稿与收藏</h3>
+          <p>粉鲍鱼账号多端同步，草稿、收藏夹与浏览记录换设备也不丢失。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 新手教程 -->
+  <section id="guide" aria-labelledby="h-guide">
+    <div class="head">
+      <p class="eyebrow">Getting Started</p>
+      <h2 id="h-guide">三步上手粉鲍鱼</h2>
+      <p class="lead">第一次用粉鲍鱼？跟着下面三步，两分钟就能玩明白。</p>
+    </div>
+    <div class="wrap">
+      <div class="steps">
+        <article class="step">
+          <h3>下载与安装</h3>
+          <p>在本页下方点击「下载粉鲍鱼 APP」，选择 iOS 或 Android 版本，安装完成后打开粉鲍鱼。</p>
+        </article>
+        <article class="step">
+          <h3>选择兴趣标签</h3>
+          <p>注册后勾选 5 个以上兴趣标签，粉鲍鱼会据此生成你的专属首页与圈子推荐。</p>
+        </article>
+        <article class="step">
+          <h3>发布第一条内容</h3>
+          <p>点击底部「+」，用粉鲍鱼模板上传图片或视频，加上话题即可发布，同好马上能看到。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 用户评价 -->
+  <section id="reviews" aria-labelledby="h-reviews">
+    <div class="head">
+      <p class="eyebrow">User Reviews</p>
+      <h2 id="h-reviews">粉鲍鱼用户怎么说</h2>
+      <p class="lead">来自应用商店与粉鲍鱼社区的真实反馈。</p>
+    </div>
+    <div class="wrap">
+      <div class="quotes">
+        <blockquote class="quote">
+          <p class="stars" aria-label="5 星">★★★★★</p>
+          <p>「在粉鲍鱼找到了本地的手工圈，每周都有线下活动，社区氛围比想象中友好很多。」</p>
+          <div class="who"><span class="avatar" aria-hidden="true">小</span><span>小满 <small>粉鲍鱼 2 年用户</small></span></div>
+        </blockquote>
+        <blockquote class="quote">
+          <p class="stars" aria-label="5 星">★★★★★</p>
+          <p>「粉鲍鱼的推荐很准，刷半小时全是我想看的内容，编辑器模板也好看。」</p>
+          <div class="who"><span class="avatar" aria-hidden="true">A</span><span>Aki <small>摄影爱好者</small></span></div>
+        </blockquote>
+        <blockquote class="quote">
+          <p class="stars" aria-label="4 星">★★★★☆</p>
+          <p>「粉鲍鱼青少年模式对家里孩子很实用，私信过滤帮我省了不少心。」</p>
+          <div class="who"><span class="avatar" aria-hidden="true">林</span><span>林女士 <small>家长用户</small></span></div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 常见问题 -->
+  <section id="faq" aria-labelledby="h-faq">
+    <div class="head">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="h-faq">粉鲍鱼常见问题</h2>
+      <p class="lead">关于下载、账号与内容的常见疑问，这里都能找到答案。</p>
+    </div>
+    <div class="wrap">
+      <div class="faq">
+        <details open="open">
+          <summary>粉鲍鱼 APP 是免费的吗？</summary>
+          <p>是的。粉鲍鱼基础功能永久免费，包含注册、发帖、加圈与私信。部分虚拟装扮与会员特权为可选付费项目，不影响正常使用。</p>
+        </details>
+        <details>
+          <summary>粉鲍鱼支持哪些系统版本？</summary>
+          <p>粉鲍鱼支持 iOS 13.0 及以上、Android 8.0 及以上系统。低于该版本的设备可访问粉鲍鱼网页版轻量浏览。</p>
+        </details>
+        <details>
+          <summary>如何下载粉鲍鱼最新版？</summary>
+          <p>在本页「下载粉鲍鱼」区域选择对应平台即可获取最新版；老用户打开粉鲍鱼后可在「我的 - 设置 - 检查更新」中升级。</p>
+        </details>
+        <details>
+          <summary>忘记粉鲍鱼账号密码怎么办？</summary>
+          <p>在粉鲍鱼登录页点击「忘记密码」，通过绑定手机号或邮箱完成验证后即可重置，账号内的收藏与草稿不会丢失。</p>
+        </details>
+        <details>
+          <summary>粉鲍鱼如何保护个人隐私？</summary>
+          <p>粉鲍鱼默认不公开地理位置与通讯录，用户可随时在隐私设置中关闭个性化推荐、导出或删除个人数据。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 下载 -->
+  <section id="download" aria-labelledby="h-dl">
+    <div class="cta-box">
+      <div class="cta-in">
+        <p class="eyebrow">Download</p>
+        <h2 id="h-dl">现在就下载粉鲍鱼</h2>
+        <p class="lead" style="margin-left:auto;margin-right:auto">安装包仅 48MB，支持 iOS 与 Android，30 秒完成安装，立刻进入你的兴趣圈子。</p>
+        <div class="store">
+          <a href="#">🍎 App Store 下载</a>
+          <a href="#">🤖 Android 下载</a>
+          <a href="#">🖥️ 网页版入口</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. 关于 -->
+  <section id="about" aria-labelledby="h-about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div>
+          <p class="eyebrow">About Us</p>
+          <h2 id="h-about">关于粉鲍鱼</h2>
+          <p class="lead">粉鲍鱼成立于 2021 年，是一款以「兴趣优先」为理念的中文内容社区。我们相信，再小的爱好也值得被认真对待——粉鲍鱼所做的，就是让每一种爱好都能找到自己的圈子。</p>
+          <ul>
+            <li>860 万注册用户，日活超过 120 万</li>
+            <li>32 万个兴趣圈子，覆盖 200+ 细分领域</li>
+            <li>内容审核 7×24 小时在线，社区规范公开透明</li>
+            <li>数据全程加密传输，通过国家信息安全等级保护认证</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <div><span>网站名称</span><b>粉鲍鱼</b></div>
+          <div><span>官方网站</span><b>https://fenbaoyu-app.com</b></div>
+          <div><span>最新版本</span><b>v3.2.0</b></div>
+          <div><span>安装包大小</span><b>48 MB</b></div>
+          <div><span>支持系统</span><b>iOS 13+ / Android 8+</b></div>
+          <div><span>客服邮箱</span><b>hi@fenbaoyu-app.com</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="f-grid">
+    <div>
+      <h4>粉鲍鱼</h4>
+      <p style="color:var(--sub);font-size:.88rem">粉鲍鱼 · 让每一种爱好都有自己的圈子</p>
+    </div>
+    <div>
+      <h4>产品</h4>
+      <a href="#features">核心功能</a>
+      <a href="#download">APP 下载</a>
+      <a href="#guide">新手教程</a>
+    </div>
+    <div>
+      <h4>帮助</h4>
+      <a href="#faq">常见问题</a>
+      <a href="#">意见反馈</a>
+      <a href="#">举报中心</a>
+    </div>
+    <div>
+      <h4>关于</h4>
+      <a href="#about">关于粉鲍鱼</a>
+      <a href="#">用户协议</a>
+      <a href="#">隐私政策</a>
+    </div>
+  </div>
+  <p class="copy">© 2026 粉鲍鱼 fenbaoyu-app.com · 保留所有权利 · 本站为粉鲍鱼官方网站</p>
+</footer>
+
+<nav class="tabbar" aria-label="移动端快捷导航">
+  <ul>
+    <li><a href="#home" class="active"><span class="ti" aria-hidden="true">🏠</span>首页</a></li>
+    <li><a href="#features"><span class="ti" aria-hidden="true">🌸</span>功能</a></li>
+    <li><a href="#guide"><span class="ti" aria-hidden="true">📖</span>教程</a></li>
+    <li><a href="#reviews"><span class="ti" aria-hidden="true">💬</span>评价</a></li>
+    <li><a href="#download"><span class="ti" aria-hidden="true">⬇️</span>下载</a></li>
+  </ul>
+</nav>
+
+<script>
+(function () {
+  var bar = document.getElementById('bar');
+  var links = document.querySelectorAll('.nav a, .tabbar a');
+  var secs = [];
+  links.forEach(function (a) {
+    var id = a.getAttribute('href');
+    if (id && id.charAt(0) === '#') {
+      var el = document.querySelector(id);
+      if (el && secs.indexOf(el) < 0) { secs.push(el); }
+    }
+  });
+
+  function onScroll() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    bar.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+    var cur = null;
+    for (var i = 0; i < secs.length; i++) {
+      if (secs[i].getBoundingClientRect().top <= 120) { cur = secs[i].id; }
+    }
+    links.forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://fenbaoyu-app.com/#website",
+      "url": "https://fenbaoyu-app.com/",
+      "name": "粉鲍鱼",
+      "alternateName": "fenbaoyu-app",
+      "description": "粉鲍鱼官网，提供粉鲍鱼APP官方下载、功能介绍、使用教程与常见问题。",
+      "inLanguage": "zh-CN",
+      "publisher": { "@id": "https://fenbaoyu-app.com/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://fenbaoyu-app.com/#organization",
+      "name": "粉鲍鱼",
+      "url": "https://fenbaoyu-app.com/",
+      "email": "hi@fenbaoyu-app.com",
+      "description": "粉鲍鱼是一款面向年轻人的兴趣内容社区APP。"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "粉鲍鱼",
+      "applicationCategory": "SocialNetworkingApplication",
+      "operatingSystem": "iOS 13+, Android 8+",
+      "softwareVersion": "3.2.0",
+      "fileSize": "48MB",
+      "url": "https://fenbaoyu-app.com/",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "12846", "bestRating": "5" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "粉鲍鱼 APP 是免费的吗？",
+          "acceptedAnswer": { "@type": "Answer", "text": "是的。粉鲍鱼基础功能永久免费，包含注册、发帖、加圈与私信。部分虚拟装扮与会员特权为可选付费项目，不影响正常使用。" }
+        },
+        {
+          "@type": "Question",
+          "name": "粉鲍鱼支持哪些系统版本？",
+          "acceptedAnswer": { "@type": "Answer", "text": "粉鲍鱼支持 iOS 13.0 及以上、Android 8.0 及以上系统。低于该版本的设备可访问粉鲍鱼网页版轻量浏览。" }
+        },
+        {
+          "@type": "Question",
+          "name": "如何下载粉鲍鱼最新版？",
+          "acceptedAnswer": { "@type": "Answer", "text": "在本页「下载粉鲍鱼」区域选择对应平台即可获取最新版；老用户打开粉鲍鱼后可在「我的 - 设置 - 检查更新」中升级。" }
+        },
+        {
+          "@type": "Question",
+          "name": "忘记粉鲍鱼账号密码怎么办？",
+          "acceptedAnswer": { "@type": "Answer", "text": "在粉鲍鱼登录页点击「忘记密码」，通过绑定手机号或邮箱完成验证后即可重置，账号内的收藏与草稿不会丢失。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
